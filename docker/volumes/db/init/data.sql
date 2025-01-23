@@ -1,4 +1,4 @@
-≠-- CREATE SCHEMA public; --this may be needed if you have errors relating to public check here
+-- CREATE SCHEMA public; --this may be needed if you have errors relating to public check here
 GRANT USAGE ON SCHEMA public TO anon, authenticated, service_role;
 GRANT ALL ON ALL TABLES IN SCHEMA public TO anon, authenticated, service_role;
 GRANT ALL ON ALL ROUTINES IN SCHEMA public TO anon, authenticated, service_role;
@@ -49,7 +49,7 @@ CREATE TABLE IF NOT EXISTS "prod"."albums"(
 CREATE TABLE test.albums (LIKE prod.albums INCLUDING ALL);
 
 ALTER TABLE "prod"."albums" OWNER TO "postgres";
-ALTER TABLE "test"."albums" OWNER TO "postgres";test.albums
+ALTER TABLE "test"."albums" OWNER TO "postgres";
 
 -- Tracks
 CREATE TABLE IF NOT EXISTS prod."tracks" (
